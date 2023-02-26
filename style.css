@@ -1,0 +1,99 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #674BB2 url(/images/bg-desktop.svg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Noto Serif TC', serif;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.warp {
+    max-width: 1280px;
+    margin: 60px auto 0 auto;
+}
+
+.header {
+
+}
+
+.header_logo {
+
+}
+
+.banner {
+    display: flex;
+    color: #FFF;
+    margin-top: 100px;
+}
+
+.banner_left {
+    margin-right: 60px;
+}
+
+.banner_left img {
+    width: 700px;
+}
+
+.banner_right {
+    margin-top: 45px;
+}
+
+.banner_right h2 {
+    /* font-size: 400; */
+
+}
+
+.banner_btn {
+    width: 200px;
+    height: 60px;
+    border-radius: 200px;
+    border-style: none;
+    box-shadow: 5px 5px 20px #403c4c;
+}
+.banner_btn:hover {
+    color: #fff;
+    background-color: #e980e7;
+
+}
+.footer {
+    display: flex;
+    justify-content: end;
+}
+
+.footer_contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.footer_contact img {
+    height: 40px;
+    margin-left: 15px;
+}
+.footer_contact img a:hover{
+
+}
+
+@media screen and (max-width: 750px) { /*手機版*/
+    .warp {
+        width: 95%;
+        margin: auto;
+        background: #674BB2 url(/images/bg-mobile.svg) fixed center cover;
+    }
+    .banner {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .banner_left {
+        margin-right: 0px;
+    }
+    .banner_right {
+        text-align: center;
+    }
+    .banner_left img {
+        width: 100%;
+    }
+    .banner
+
+}
