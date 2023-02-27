@@ -8,21 +8,21 @@ html, body {
     font-family: 'Poppins', sans-serif; 
 }
 
+.padding-x-20 {
+    padding: 0 20px;
+}
+
 .warp {
     max-width: 1280px;
     margin: 60px auto 0 auto;
-}
-
-.header {
-
-}
-
-.header_logo {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .banner {
     display: flex;
+    justify-content: center;
     color: #FFF;
     margin-top: 100px;
 }
@@ -39,9 +39,14 @@ html, body {
     margin-top: 45px;
 }
 
-.banner_right h2 {
-    /* font-size: 400; */
+.banner_right h2{
+    width: 350px;
+    font-size: 2.5em;
+    font-weight: 600;
+}
 
+.banner_right p {
+    border: 1px solid #000;
 }
 
 .banner_btn {
@@ -51,11 +56,12 @@ html, body {
     border-style: none;
     box-shadow: 5px 5px 20px #403c4c;
 }
+
 .banner_btn:hover {
     color: #fff;
     background-color: #e980e7;
-
 }
+
 .footer {
     display: flex;
     justify-content: end;
@@ -71,29 +77,47 @@ html, body {
     height: 40px;
     margin-left: 15px;
 }
-.footer_contact img a:hover{
 
-}
-
-@media screen and (max-width: 750px) { /*手機版*/
+@media screen and (max-width: 1024px) { /*手機版*/
+    html, body {
+        /* background: #674BB2 url(/images/bg-mobile.svg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: contain; */
+        background: #674BB2 url(/images/bg-mobile.svg) fixed no-repeat 0 0 / contain;
+    }
     .warp {
-        width: 95%;
-        margin: auto;
-        background: #674BB2 url(/images/bg-mobile.svg) fixed center cover;
+        margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header {
+        align-self: flex-start  ;
     }
     .banner {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     .banner_left {
         margin-right: 0px;
+        width: 100%;
     }
     .banner_right {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .banner_left img {
         width: 100%;
     }
-    .banner
-
+    .footer{
+        justify-content: center;
+        margin-top: 50px;
+    }
 }
