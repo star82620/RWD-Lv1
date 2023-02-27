@@ -1,9 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background: #674BB2 url(/images/bg-desktop.svg);
-    background-attachment: fixed;
-    background-size: cover;
+    background: #674BB2 url(/images/bg-desktop.svg) fixed 0 0 / cover;
     font-family: 'Noto Serif TC', serif;
     font-family: 'Poppins', sans-serif; 
 }
@@ -14,10 +12,10 @@ html, body {
 
 .warp {
     max-width: 1280px;
-    margin: 60px auto 0 auto;
+    margin: 60px auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .banner {
@@ -25,6 +23,7 @@ html, body {
     justify-content: center;
     color: #FFF;
     margin-top: 100px;
+    padding: 0 20px;
 }
 
 .banner_left {
@@ -36,25 +35,25 @@ html, body {
 }
 
 .banner_right {
-    margin-top: 45px;
+    width: 500px;
 }
 
 .banner_right h2{
-    width: 350px;
-    font-size: 2.5em;
+    font-size: 2.3em;
     font-weight: 600;
 }
 
 .banner_right p {
-    border: 1px solid #000;
+    font-size: 1.5em;
 }
 
 .banner_btn {
-    width: 200px;
-    height: 60px;
+    padding: 20px 120px;
     border-radius: 200px;
     border-style: none;
     box-shadow: 5px 5px 20px #403c4c;
+    font-size: 1.5em;
+    margin-top: 1em;
 }
 
 .banner_btn:hover {
@@ -68,38 +67,35 @@ html, body {
 }
 
 .footer_contact {
+    width: 150px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 25px;
 }
 
 .footer_contact img {
     height: 40px;
-    margin-left: 15px;
 }
 
-@media screen and (max-width: 1024px) { /*手機版*/
+@media screen and (max-width: 1024px) { 
     html, body {
-        /* background: #674BB2 url(/images/bg-mobile.svg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: contain; */
         background: #674BB2 url(/images/bg-mobile.svg) fixed no-repeat 0 0 / contain;
     }
     .warp {
-        margin: 0 auto;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
     }
     .header {
-        align-self: flex-start  ;
+        align-self: flex-start;
+        padding: 0 80px;
     }
     .banner {
+        padding: 0 80px;
+
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
     .banner_left {
@@ -112,12 +108,40 @@ html, body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 60px;
     }
     .banner_left img {
         width: 100%;
     }
-    .footer{
+    .footer {
         justify-content: center;
         margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .padding-x-20 {
+        padding: 0;
+    }
+    .warp {
+        margin: 30px auto;
+    }
+    .header {
+        align-self: center;
+        margin-bottom: 40px;
+    }
+    .banner {
+        margin: 0;
+    }
+    .banner,.banner_right h2 , .banner_right p {
+        min-width: 300px;
+    }
+    .banner_right {
+        width: auto;
+        margin: 0;
+        justify-content: space-around;
+    }
+    .banner_btn {
+        padding: 20px 80px;
     }
 }
