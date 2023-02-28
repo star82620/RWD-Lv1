@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background: #674BB2 url(/images/bg-desktop.svg) fixed 0 0 / cover;
+    background: #674BB2 url(./images/bg-desktop.svg) fixed 0 0 / cover;
     font-family: 'Noto Serif TC', serif;
     font-family: 'Poppins', sans-serif; 
 }
@@ -79,7 +79,7 @@ html, body {
 
 @media screen and (max-width: 1024px) { 
     html, body {
-        background: #674BB2 url(/images/bg-mobile.svg) fixed no-repeat 0 0 / contain;
+        background: #674BB2 url(./images/bg-mobile.svg) fixed no-repeat 0 0 / contain;
     }
     .warp {
         display: flex;
